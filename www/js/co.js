@@ -25,6 +25,7 @@
   }
   $scope.setSelectedOrgUnit = function(orgUnit){
     $scope.selectedOgUnit = orgUnit.name;
+    $scope.organisationUnitsModal.hide();
   }
 
   function getSorted (organisationUnit) {
