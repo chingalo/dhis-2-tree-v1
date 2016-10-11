@@ -5,7 +5,7 @@
       <button class="button button-clear" ng-click="organisationUnitsModal.hide()">Close</button>
     </div>
   </ion-header-bar>
-  <ion-content>
+  <ion-content overflow-scroll="true">
     <div class="row">
       <div class="col col-100">
          <div class="list">
@@ -42,6 +42,7 @@
                       <i class="icon ion-navicon"  ng-if="orgUnit.children.length==0"></i>
                       <span ng-click="setSelectedOrgUnit(orgUnit)" >{{ orgUnit.name }}</span>
                     </div>
+                    <!--
                     <div ng-if="hasOrgUnitChildernOpened[orgUnit.id]" style="padding-left: 10px">
                       <div ng-repeat="orgUnit in orgUnit.children">
                         <div class="item item-icon-left" >
@@ -65,6 +66,7 @@
                         </div>
                       </div>
                     </div>
+					-->
                   </div>
                 </div>
 
