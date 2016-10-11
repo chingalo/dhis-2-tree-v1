@@ -1,0 +1,73 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <div class="list">
+      <div ng-repeat="orgUnit in data">
+        <div class="item item-icon-left" >
+          <i class="icon ion-chevron-right" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && !hasOrgUnitChildernOpened[orgUnit.id]"></i>
+          <i class="icon ion-chevron-down" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && hasOrgUnitChildernOpened[orgUnit.id]"></i>
+          <i class="icon ion-navicon"  ng-if="orgUnit.children.length==0"></i>
+          <span ng-click="setSelectedOrgUnit(orgUnit)" >{{ orgUnit.name }}</span>
+        </div>
+        <div ng-if="hasOrgUnitChildernOpened[orgUnit.id]" style="padding-left: 10px">
+
+          <div ng-repeat="orgUnit in orgUnit.children">
+            <div class="item item-icon-left" >
+              <i class="icon ion-chevron-right" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && !hasOrgUnitChildernOpened[orgUnit.id]"></i>
+              <i class="icon ion-chevron-down" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && hasOrgUnitChildernOpened[orgUnit.id]"></i>
+              <i class="icon ion-navicon"  ng-if="orgUnit.children.length==0"></i>
+              <span ng-click="setSelectedOrgUnit(orgUnit)" >{{ orgUnit.name }}</span>
+            </div>
+            <div ng-if="hasOrgUnitChildernOpened[orgUnit.id]" style="padding-left: 10px">
+
+              <div ng-repeat="orgUnit in orgUnit.children">
+                <div class="item item-icon-left" >
+                  <i class="icon ion-chevron-right" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && !hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                  <i class="icon ion-chevron-down" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                  <i class="icon ion-navicon"  ng-if="orgUnit.children.length==0"></i>
+                  <span ng-click="setSelectedOrgUnit(orgUnit)" >{{ orgUnit.name }}</span>
+                </div>
+                <div ng-if="hasOrgUnitChildernOpened[orgUnit.id]" style="padding-left: 10px">
+                  <div ng-repeat="orgUnit in orgUnit.children">
+                    <div class="item item-icon-left" >
+                      <i class="icon ion-chevron-right" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && !hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                      <i class="icon ion-chevron-down" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                      <i class="icon ion-navicon"  ng-if="orgUnit.children.length==0"></i>
+                      <span ng-click="setSelectedOrgUnit(orgUnit)" >{{ orgUnit.name }}</span>
+                    </div>
+                    <div ng-if="hasOrgUnitChildernOpened[orgUnit.id]" style="padding-left: 10px">
+                      <div ng-repeat="orgUnit in orgUnit.children">
+                        <div class="item item-icon-left" >
+                          <i class="icon ion-chevron-right" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && !hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                          <i class="icon ion-chevron-down" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                          <i class="icon ion-navicon"  ng-if="orgUnit.children.length==0"></i>
+                          <span ng-click="setSelectedOrgUnit(orgUnit)" >{{ orgUnit.name }}</span>
+                        </div>
+                        <div ng-if="hasOrgUnitChildernOpened[orgUnit.id]" style="padding-left: 10px">
+                          <div ng-repeat="orgUnit in orgUnit.children">
+                            <div class="item item-icon-left" >
+                              <i class="icon ion-chevron-right" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && !hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                              <i class="icon ion-chevron-down" ng-click="toggleOrgUnit(orgUnit)" ng-if="orgUnit.children.length>0 && hasOrgUnitChildernOpened[orgUnit.id]"></i>
+                              <i class="icon ion-navicon"  ng-if="orgUnit.children.length==0"></i>
+                              <span ng-click="setSelectedOrgUnit(orgUnit)" >{{ orgUnit.name }}</span>
+                            </div>
+                            <!--<div ng-if="hasOrgUnitChildernOpened[orgUnit.id]" style="padding-left: 10px">-->
+                              <!--{{ orgUnit.children }}-->
+                            <!--</div>-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
